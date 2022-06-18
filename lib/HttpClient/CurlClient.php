@@ -173,6 +173,7 @@ class CurlClient implements ClientInterface
         $opts[CURLOPT_CONNECTTIMEOUT] = $this->connectTimeout;
         $opts[CURLOPT_TIMEOUT] = $this->timeout;
         $opts[CURLOPT_HEADERFUNCTION] = $headerCallback;
+        $opts[CURLOPT_ENCODING] = "";
         if($headers) {
             $opts[CURLOPT_HTTPHEADER] = $headers;
         }
